@@ -59,7 +59,7 @@ export const ShowShortCart = ({post, cateList, authorList}) => {
                 {Parser(excerpt)}
                 <p className='modified'>Modified: {modifiedDate} by {authorName}</p>
             </Card.Body>
-            <Link to={{pathname : `/React-WordpressAPI-Project/Post/${post.id}`}}>
+            <Link to={{pathname : `/Post/${post.id}`}}>
                 <Button style={{width:"100%"}}>Show</Button>
             </Link>
         </Card>

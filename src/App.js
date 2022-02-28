@@ -11,10 +11,9 @@ function App() {
       <ShowNavbar/>
       <Routes>
         <Route path="/" element={<ShowHome />} />
-        <Route path="/React-WordpressAPI-Project/Home" element={<ShowHome />} />
-        <Route path="/React-WordpressAPI-Project/Post" element={<ShowPost />} />
-        <Route path="/React-WordpressAPI-Project/Post/:id" element={<ShowPostDetail />} />
-        <Route path="/React-WordpressAPI-Project/Author" element={<ShowAuthorPage />} />
+        <Route path="/Post" element={<ShowPost />} />
+        <Route path="/Post/:id" element={<ShowPostDetail />} />
+        <Route path="/Author" element={<ShowAuthorPage />} />
       </Routes>
     </>
   );
