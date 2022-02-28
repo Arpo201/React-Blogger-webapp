@@ -32,7 +32,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
                 </Card.Body>
             </Card>
             <div style={{backgroundColor: "white", marginTop: "1vh"}}>
-                <textarea className='commentArea' placeholder="What do you thing ?" onChange={(val) => setText(val.target.value)}></textarea>
+                <textarea className='commentArea' placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
                 <Button onClick={() =>setClick(true)}>Comment</Button>
                 {click?postComment():null}
             </div>
