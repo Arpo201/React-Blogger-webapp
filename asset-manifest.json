@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/React-WordpressAPI-Project/static/css/main.a36b2300.css",
-    "main.js": "/React-WordpressAPI-Project/static/js/main.b9e31566.js",
+    "main.js": "/React-WordpressAPI-Project/static/js/main.69952568.js",
     "static/js/787.633816a4.chunk.js": "/React-WordpressAPI-Project/static/js/787.633816a4.chunk.js",
     "index.html": "/React-WordpressAPI-Project/index.html",
     "main.a36b2300.css.map": "/React-WordpressAPI-Project/static/css/main.a36b2300.css.map",
-    "main.b9e31566.js.map": "/React-WordpressAPI-Project/static/js/main.b9e31566.js.map",
+    "main.69952568.js.map": "/React-WordpressAPI-Project/static/js/main.69952568.js.map",
     "787.633816a4.chunk.js.map": "/React-WordpressAPI-Project/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a36b2300.css",
-    "static/js/main.b9e31566.js"
+    "static/js/main.69952568.js"
   ]
 }
