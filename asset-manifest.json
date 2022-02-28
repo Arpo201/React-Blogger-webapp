@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a36b2300.css",
-    "main.js": "/static/js/main.db765964.js",
-    "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
-    "index.html": "/index.html",
-    "main.a36b2300.css.map": "/static/css/main.a36b2300.css.map",
-    "main.db765964.js.map": "/static/js/main.db765964.js.map",
-    "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
+    "main.css": "/React-WordpressAPI-Project/static/css/main.a36b2300.css",
+    "main.js": "/React-WordpressAPI-Project/static/js/main.1a891505.js",
+    "static/js/787.633816a4.chunk.js": "/React-WordpressAPI-Project/static/js/787.633816a4.chunk.js",
+    "index.html": "/React-WordpressAPI-Project/index.html",
+    "main.a36b2300.css.map": "/React-WordpressAPI-Project/static/css/main.a36b2300.css.map",
+    "main.1a891505.js.map": "/React-WordpressAPI-Project/static/js/main.1a891505.js.map",
+    "787.633816a4.chunk.js.map": "/React-WordpressAPI-Project/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a36b2300.css",
-    "static/js/main.db765964.js"
+    "static/js/main.1a891505.js"
   ]
 }
