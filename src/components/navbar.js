@@ -5,7 +5,7 @@ const ShowNavbar = (props) => {
         <>
              <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <div className="container">
-                    <Link to="/" className="navbar-brand">Valpo</Link>
+                    <Link to="/" className="navbar-brand">Blogger</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
