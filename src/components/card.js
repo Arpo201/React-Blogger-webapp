@@ -22,7 +22,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
     }
     return (
         <>
-            <Card border="secondary">
+            <Card border="secondary" style={{border: "none"}}>
                 <Card.Header style={{backgroundColor:"#253363", color: "#FFF", fontWeight: "bold", fontSize: "larger"}}>
                     {title}
                 </Card.Header>
@@ -32,7 +32,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
                     <p className='modified'>Modified: {modifiedDate} by {authorName}</p>
                 </Card.Body>
             </Card>
-            <div style={{backgroundColor: "white", marginTop: "1vh"}}>
+            <div style={{backgroundColor: "white", marginTop: "1vh", borderRadius: 5}}>
                 <textarea className='commentArea' placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
                 <Button onClick={() =>setClick(true)}>Comment</Button>
                 {click?postComment():null}

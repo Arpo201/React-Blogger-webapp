@@ -27,7 +27,7 @@ export const ShowComment = ({commentLink}) => {
             num++
             return (
                 <Col key={num-1} md={12} style={{ marginTop: 20 }}>
-                    <Card>
+                    <Card style={{border: "none"}}>
                         <Card.Header style={{backgroundColor:"#637fad", color: "#FFF", fontWeight: "bold", fontSize: "medium"}}>
                             {data.author_name + " "}
                             <span className='modified' style={{color: "white"}}>{data.date}</span>
