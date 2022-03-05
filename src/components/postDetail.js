@@ -6,19 +6,7 @@ import { Container, Col, Row } from "react-bootstrap"
 
 export const ShowPostDetail = () => {
     const {id} = useParams()
-    const [post, setPost] = useState({
-        id: 383,
-        modified: "2022-02-10T03:56:10",
-        title: {
-            "rendered": "Dolor distinctio et consectetur nam voluptatibus"
-        },
-        content: {
-            "rendered": "<p>Quod nulla animi.</p>\n<div class=\"more-link-wrapper\"><a class=\"more-link\" href=\"https://fswd-wp.devnss.com/page5/\">Continue reading<span class=\"screen-reader-text\">Dolor distinctio et consectetur nam voluptatibus</span></a></div>\n",
-            "protected": false
-        },
-        author: 2,
-        categories: [3,77,75]
-    })
+    const [post, setPost] = useState({})
     const [cate, setCate] = useState([])
     const [user, setUser] = useState([])
 
@@ -38,15 +26,18 @@ export const ShowPostDetail = () => {
 
     useEffect(
       () => {
-          GetPost()
-          GetCategory()
-          GetUser()
+          const getResult = async () => {
+            await GetPost()
+            await GetCategory()
+            await GetUser()
+          }
+          getResult()
       },
-      [],
+      []
     )
 
     function GetPostDetail() {
-        if (cate.length !== 0 && user.length !== 0){
+        if (cate.length !== 0 && user.length !== 0 && Object.keys(post).length !== 0){
             return (
                 <Col md={12} style={{ marginTop: 20 }}>
                     <ShowCart key={post.id} post={post} cateList={cate} authorList={user} />

@@ -3,20 +3,21 @@ import { useState } from 'react'
 import { Button, Card } from "react-bootstrap"
 import {Link} from "react-router-dom"
 import { ShowComment } from './comment'
+import { PostAPI } from './postAPI'
 
 export const ShowCart = ({post, cateList, authorList}) => {
-    var title, modifiedDate, content, categories, authorName
+    var title, modifiedDate, content, categories, authorName, comLink
     title = post.title.rendered
     modifiedDate = post.modified
     content = post.content.rendered
     categories = GetCategory(post.categories, cateList).join(", ")
     authorName = GetAuthor(post.author, authorList)
+    comLink = post._links.replies[0].href
 
-    const [commentList, setCommentList] = useState([])
     const [click, setClick] = useState(false)
     const [text, setText] = useState("")
     function postComment() {
-        setCommentList([...commentList, text])
+        PostAPI(post, "anonymous", text)
         setClick(false)
     }
     return (
@@ -36,7 +37,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
                 <Button onClick={() =>setClick(true)}>Comment</Button>
                 {click?postComment():null}
             </div>
-            <ShowComment commentList={commentList}></ShowComment>
+            <ShowComment commentLink={comLink}></ShowComment>
         </>
     )
 }
@@ -50,7 +51,7 @@ export const ShowShortCart = ({post, cateList, authorList}) => {
     authorName = GetAuthor(post.author, authorList)
 
     return (
-        <Card border="secondary">
+        <Card border="secondary" style={{height: "100%", border: "none"}}>
             <Card.Header style={{backgroundColor:"#253363", color: "#FFF", fontWeight: "bold", fontSize: "larger"}}>
                 {title}
             </Card.Header>

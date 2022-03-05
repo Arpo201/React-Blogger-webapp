@@ -35,7 +35,7 @@ export const ShowPost = () => {
     return (
       post.map((value) => {
         return (
-          <Col key={value.id} md={12} style={{ marginTop: 20 }}>
+          <Col key={value.id} md={6} style={{ marginTop: 20}}>
             <ShowShortCart post={value} cateList={cate} authorList={user} />
           </Col>
         )
