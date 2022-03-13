@@ -46,7 +46,7 @@ export const ShowPost = () => {
     )
   }
   
-  if (post.length === 0 |  cate.length === 0 | user.length === 0) return <div></div>
+  if (post.length === 0 | cate.length === 0 | user.length === 0) return <div></div>
   return (
     <> 
       <Container style={{backgroundColor:"#f0f0f0AA", paddingBottom: "1%", marginTop: "1%", borderRadius: 5}}>
