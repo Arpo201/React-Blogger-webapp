@@ -2,7 +2,7 @@
   "name": "my_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arpo201.github.io/",
+  "homepage": "https://arpo201.github.io/React-WordpressAPI-Project/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
