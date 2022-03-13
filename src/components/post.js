@@ -46,68 +46,68 @@ export const ShowPost = () => {
     )
   }
   
-
-    return (
-      <> 
-        <Container style={{backgroundColor:"#f0f0f0AA", paddingBottom: "1%", marginTop: "1%", borderRadius: 5}}>
-          <Row>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="All">
-              {/* // Category(3), Style(20), Runner(75), Classic(77), Life(78), Uncategorized(1) */}
-              <Nav className="RowTab">
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="All" onClick={() => setCurrentPost(getCategory(0, post))}>All</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Category" onClick={() => setCurrentPost(getCategory(3, post))}>Category</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Style" onClick={() => setCurrentPost(getCategory(20, post))}>Style</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Runner" onClick={() => setCurrentPost(getCategory(75, post))}>Runner</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Classic" onClick={() => setCurrentPost(getCategory(77, post))}>Classic</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={1} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Life" onClick={() => setCurrentPost(getCategory(78, post))}>Life</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col md={2} style={{padding: 0}}>
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link className="tab" eventKey="Uncategorized" onClick={() => setCurrentPost(getCategory(1, post))}>Uncategorized</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-              </Nav>
-            </Tab.Container>
-              <GetTotalPost></GetTotalPost>
-          </Row>
-        </Container>
-      </>
-    )
+  if (post.length === 0 |  cate.length === 0 | user.length === 0) return <div></div>
+  return (
+    <> 
+      <Container style={{backgroundColor:"#f0f0f0AA", paddingBottom: "1%", marginTop: "1%", borderRadius: 5}}>
+        <Row>
+          <Tab.Container id="left-tabs-example" defaultActiveKey="All">
+            {/* // Category(3), Style(20), Runner(75), Classic(77), Life(78), Uncategorized(1) */}
+            <Nav className="RowTab">
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="All" onClick={() => setCurrentPost(getCategory(0, post))}>All</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Category" onClick={() => setCurrentPost(getCategory(3, post))}>Category</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Style" onClick={() => setCurrentPost(getCategory(20, post))}>Style</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Runner" onClick={() => setCurrentPost(getCategory(75, post))}>Runner</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Classic" onClick={() => setCurrentPost(getCategory(77, post))}>Classic</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={1} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Life" onClick={() => setCurrentPost(getCategory(78, post))}>Life</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col md={2} style={{padding: 0}}>
+                <Nav variant="pills" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link className="tab" eventKey="Uncategorized" onClick={() => setCurrentPost(getCategory(1, post))}>Uncategorized</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+            </Nav>
+          </Tab.Container>
+            <GetTotalPost></GetTotalPost>
+        </Row>
+      </Container>
+    </>
+  )
 }
