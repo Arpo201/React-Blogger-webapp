@@ -34,7 +34,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
                 <Card.Footer className="text-muted"><b>Categories: </b>{categories}</Card.Footer>
                 <Card.Body bg="Light">
                     {Parser(content)}
-                    <p className='modified'>Modified: {modifiedDate} by {authorName}</p>
+                    <p className='modified'>Modified: {modifiedDate.replace("T", " ")} by {authorName}</p>
                 </Card.Body>
             </Card>
             <div style={{backgroundColor: "white", marginTop: "1vh", borderRadius: 5}}>
@@ -62,7 +62,7 @@ export const ShowShortCart = ({post, cateList, authorList}) => {
             <Card.Footer className="text-muted"><b>Categories: </b>{categories}</Card.Footer>
             <Card.Body bg="Light">
                 {Parser(excerpt)}
-                <p className='modified'>Modified: {modifiedDate} by {authorName}</p>
+                <p className='modified'>Modified: {modifiedDate.replace("T", " ")} by {authorName}</p>
             </Card.Body>
             <Link to={{pathname : `/Post/${post.id}`}}>
                 <Button style={{width:"100%"}}>Read</Button>
