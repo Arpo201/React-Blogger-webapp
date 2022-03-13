@@ -19,11 +19,12 @@ const ShowAuthorPage = () => {
     return (
         <>
             <Container>
+                <Row  style={{justifyContent: "center"}}>
                 {
                     user.map(person => {
                         return (
-                            <Row key={person.id} style={{justifyContent: "center"}}>
-                                <Col md={4} style={{ marginTop: 20 }}>
+                            
+                                <Col key={person.id} md={4} style={{ marginTop: 20 }}>
                                     <Card.Header className="text-center" style={{backgroundColor:"#253363", color: "#FFF", fontWeight: "bold", fontSize: "larger"}}>
                                         {person.name}
                                     </Card.Header>
@@ -36,10 +37,10 @@ const ShowAuthorPage = () => {
                                         </p>
                                     </Card.Body>
                                 </Col>
-                            </Row>
                         )
                     })
                 }
+                </Row>
             </Container>
         </>
     );
