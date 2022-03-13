@@ -1,5 +1,5 @@
 import Parser from 'html-react-parser'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, Card } from "react-bootstrap"
 import {Link} from "react-router-dom"
 import { ShowComment } from './comment'
@@ -14,11 +14,16 @@ export const ShowCart = ({post, cateList, authorList}) => {
     authorName = GetAuthor(post.author, authorList)
     comLink = post._links.replies[0].href
 
-    const [click, setClick] = useState(false)
     const [text, setText] = useState("")
+    const [addComment, setAddComment] = useState(null)
+
+    //comment
     function postComment() {
-        PostAPI(post, "anonymous", text)
-        setClick(false)
+        console.log("working")
+        PostAPI(post, "anonymous", text).then((response) => {
+            setAddComment(response)
+        })
+        
     }
     return (
         <>
@@ -34,10 +39,9 @@ export const ShowCart = ({post, cateList, authorList}) => {
             </Card>
             <div style={{backgroundColor: "white", marginTop: "1vh", borderRadius: 5}}>
                 <textarea className='commentArea' placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
-                <Button onClick={() =>setClick(true)}>Comment</Button>
-                {click?postComment():null}
+                <Button onClick={() =>postComment()}>Comment</Button>
             </div>
-            <ShowComment commentLink={comLink}></ShowComment>
+            <ShowComment commentLink={comLink} addComment={addComment}></ShowComment>
         </>
     )
 }

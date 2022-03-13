@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { Card, Col } from "react-bootstrap"
 
-export const ShowComment = ({commentLink}) => {
+export const ShowComment = ({commentLink, addComment}) => {
     const [comment, setComment] = useState([])
 
     const GetComment = async () => {
@@ -17,7 +17,7 @@ export const ShowComment = ({commentLink}) => {
             }
             getResult()
         },
-        []
+        [addComment]
       )
     
     var num = 0
@@ -35,8 +35,6 @@ export const ShowComment = ({commentLink}) => {
                         <Card.Body dangerouslySetInnerHTML={{__html:data.content.rendered}}>
                         </Card.Body>
                     </Card>
-                    {console.log(data.id)}
-
                 </Col>
             )
 

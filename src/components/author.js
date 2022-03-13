@@ -15,7 +15,7 @@ const ShowAuthorPage = () => {
         },
         [],
       )
-
+ 
     return (
         <>
             <Container>
@@ -27,6 +27,7 @@ const ShowAuthorPage = () => {
                                     <Card.Header className="text-center" style={{backgroundColor:"#253363", color: "#FFF", fontWeight: "bold", fontSize: "larger"}}>
                                         {person.name}
                                     </Card.Header>
+                                    <Card.Img variant="top" src={person.avatar_urls[96]} />
                                     <Card.Body className="text-left" style={{backgroundColor: "white"}}>
                                         <p>
                                             <b>ID:</b> {person.id}
