@@ -4,7 +4,7 @@ import { Card, Col, Row } from "react-bootstrap"
 
 export const ShowComment = ({commentLink, addComment}) => {
     const [comment, setComment] = useState([])
-
+    
     const GetComment = async () => {
         const comment = await axios.get(commentLink)
         setComment(comment.data)
