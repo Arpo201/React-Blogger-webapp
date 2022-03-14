@@ -30,7 +30,7 @@ export const ShowComment = ({commentLink, addComment}) => {
                     <Card style={{border: "none"}}>
                         <Card.Header style={{backgroundColor:"#637fad", color: "#FFF", fontWeight: "bold", fontSize: "medium"}}>
                             {data.author_name + " "}
-                            <span className='modified' style={{color: "white"}}>{data.date}</span>
+                            <span className='modified' style={{color: "white"}}>{data.date.replace("T", " ")}</span>
                         </Card.Header>
                         <Card.Body dangerouslySetInnerHTML={{__html:data.content.rendered}}>
                         </Card.Body>

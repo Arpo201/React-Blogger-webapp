@@ -15,15 +15,17 @@ export const ShowCart = ({post, cateList, authorList}) => {
     comLink = post._links.replies[0].href
 
     const [text, setText] = useState("")
+    const [name, setName] = useState("")
     const [addComment, setAddComment] = useState(null)
 
     //comment
     function postComment() {
         console.log("working")
-        PostAPI(post, "Anonymous", text).then((response) => {
+        PostAPI(post, name, text).then((response) => {
             setAddComment(response)
         })
         setText("")
+        setName("")
     }
     return (
         <>
@@ -38,6 +40,8 @@ export const ShowCart = ({post, cateList, authorList}) => {
                 </Card.Body>
             </Card>
             <div style={{backgroundColor: "white", marginTop: "1vh", borderRadius: 5}}>
+                <input className="name" type="text" value={name} placeholder="Name" style={{width: "100%"}} onChange={(val) => setName(val.target.value)}/>
+                <hr style={{margin: 0}}></hr>
                 <textarea className='commentArea' value={text} placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
                 <Button onClick={() =>postComment()}>Comment</Button>
             </div>
