@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Card, Col, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 
 export const ShowComment = ({commentLink, addComment}) => {
     const [comment, setComment] = useState([])
@@ -28,7 +28,7 @@ export const ShowComment = ({commentLink, addComment}) => {
             return (
                 <Row key={num-1} style={{ marginTop: 20, backgroundColor:"#fffe", width: "100%", marginLeft: "auto", marginRight: "auto", padding:"2%"}}>
                     <Col md={2} style={{textAlign: "center"}}>
-                        <img src={data.author_avatar_urls[96]} className="img-fluid rounded-circle"/>
+                        <img src={data.author_avatar_urls[96]} className="img-fluid rounded-circle" alt=""/>
                         <br></br>
                         {data.author_name + " "}
                     </Col>

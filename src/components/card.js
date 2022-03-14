@@ -43,7 +43,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
                 <input className="name" type="text" value={name} placeholder="Name" style={{width: "100%"}} onChange={(val) => setName(val.target.value)}/>
                 <hr style={{width: "98%", marginLeft: "1%", marginTop: 0, marginBottom: 0}}></hr>
                 <textarea className='commentArea' value={text} placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
-                <Button onClick={() =>postComment()}>Comment</Button>
+                <Button onClick={() =>postComment()} style={{margin: "1%"}}>Comment</Button>
             </div>
             <ShowComment commentLink={comLink} addComment={addComment}></ShowComment>
         </>
