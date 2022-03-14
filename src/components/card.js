@@ -41,7 +41,7 @@ export const ShowCart = ({post, cateList, authorList}) => {
             </Card>
             <div style={{backgroundColor: "white", marginTop: "1vh", borderRadius: 5}}>
                 <input className="name" type="text" value={name} placeholder="Name" style={{width: "100%"}} onChange={(val) => setName(val.target.value)}/>
-                <hr style={{margin: 0}}></hr>
+                <hr style={{width: "98%", marginLeft: "1%", marginTop: 0, marginBottom: 0}}></hr>
                 <textarea className='commentArea' value={text} placeholder="What do you think?" onChange={(val) => setText(val.target.value)}></textarea>
                 <Button onClick={() =>postComment()}>Comment</Button>
             </div>

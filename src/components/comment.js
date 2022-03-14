@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Card, Col } from "react-bootstrap"
+import { Card, Col, Row } from "react-bootstrap"
 
 export const ShowComment = ({commentLink, addComment}) => {
     const [comment, setComment] = useState([])
@@ -26,16 +26,17 @@ export const ShowComment = ({commentLink, addComment}) => {
         comment.map(data => {
             num++
             return (
-                <Col key={num-1} md={12} style={{ marginTop: 20 }}>
-                    <Card style={{border: "none"}}>
-                        <Card.Header style={{backgroundColor:"#637fad", color: "#FFF", fontWeight: "bold", fontSize: "medium"}}>
-                            {data.author_name + " "}
-                            <span className='modified' style={{color: "white"}}>{data.date.replace("T", " ")}</span>
-                        </Card.Header>
-                        <Card.Body dangerouslySetInnerHTML={{__html:data.content.rendered}}>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                <Row key={num-1} style={{ marginTop: 20, backgroundColor:"#fffe", width: "100%", marginLeft: "auto", marginRight: "auto", padding:"2%"}}>
+                    <Col md={2} style={{textAlign: "center"}}>
+                        <img src={data.author_avatar_urls[96]} className="img-fluid rounded-circle"/>
+                        <br></br>
+                        {data.author_name + " "}
+                    </Col>
+                    <Col md={10}>
+                        <span className='modified'>Commented: {data.date.replace("T", " ")}</span>
+                        <p dangerouslySetInnerHTML={{__html:data.content.rendered}}></p>
+                    </Col>
+                </Row>
             )
 
         })
