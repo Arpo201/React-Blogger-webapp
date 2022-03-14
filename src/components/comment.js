@@ -26,7 +26,7 @@ export const ShowComment = ({commentLink, addComment}) => {
         comment.map(data => {
             num++
             return (
-                <Row key={num-1} style={{ marginTop: 20, backgroundColor:"#fffe", width: "100%", marginLeft: "auto", marginRight: "auto", padding:"2%"}}>
+                <Row key={num-1} style={{ marginTop: 20, backgroundColor:"#fffe", width: "100%", marginLeft: "auto", marginRight: "auto", padding:"2%", borderRadius: 5}}>
                     <Col md={2} style={{textAlign: "center"}}>
                         <img src={data.author_avatar_urls[96]} className="img-fluid rounded-circle" alt=""/>
                         <br></br>
