@@ -24,7 +24,7 @@ const ShowAuthorPage = () => {
                     user.map(person => {
                         return (
                             
-                                <Col key={person.id} md={4} style={{ marginTop: 20 }}>
+                                <Col key={person.id} md={3} style={{ marginTop: 20 }}>
                                     <Card.Header className="text-center" style={{backgroundColor:"#253363", color: "#FFF", fontWeight: "bold", fontSize: "larger"}}>
                                         {person.name}
                                     </Card.Header>
