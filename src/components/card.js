@@ -69,7 +69,7 @@ export const ShowShortCart = ({post, cateList, authorList}) => {
                 <p className='modified'>Modified: {modifiedDate.replace("T", " ")} by {authorName}</p>
             </Card.Body>
             <Link to={{pathname : `/Post/${post.id}`}}>
-                <Button style={{width:"100%"}}>Read</Button>
+                <Button variant="outline-primary" style={{width:"90%", marginLeft: "5%", marginBottom: "3%"}}>Read</Button>
             </Link>
         </Card>
     )
