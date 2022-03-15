@@ -59,7 +59,7 @@ const ShowAuthorArticle = () => {
         <>
             <Container style={{backgroundColor:"#f0f0f0AA", paddingBottom: "1%", marginTop: "1%", borderRadius: 5}}>
                 <Row style={{paddingTop: "1%"}}>
-                    <Col  md={12} style={{textAlign: "center", color: "#253363"}}>
+                    <Col  md={12} style={{textAlign: "center", color: "#253363", overflowY: "hidden"}}>
                         <h1 style={{fontWeight: "bold"}}>{user.filter(userID => userID.id === parseInt(id))[0].name}'s posts</h1>
                     </Col>
                     <GetTotalPost></GetTotalPost>
