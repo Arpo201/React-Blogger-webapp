@@ -37,8 +37,8 @@ const ShowAuthorPage = () => {
                                 <Card.Img variant="top" src={person.avatar_urls[96]} />
                                 <Card.Body className="text-left" style={{backgroundColor: "white", textAlign: "center"}}>
                                     <h5>{post.filter(postID => postID.author === person.id).length} Posts</h5>
-                                    <Link to={{pathname : `/Author/${person.id}`}}>
-                                        <Button variant="outline-primary" style={{width:"90%", marginLeft: "5%", marginBottom: "3%"}}>Show</Button>
+                                    <Link to={{pathname : `/Author/${person.id}`}} style={{textAlign: "center"}}>
+                                        <Button variant="outline-primary" style={{width:"90%", marginBottom: "3%"}}>Show</Button>
                                     </Link>
                                 </Card.Body>
                             </Col>
