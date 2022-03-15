@@ -34,7 +34,7 @@ export const ShowPost = () => {
       [],
     )
 
-    function GetTotalPost() {
+  function GetTotalPost() {
     return (
       currentPost.map((value) => {
         return (

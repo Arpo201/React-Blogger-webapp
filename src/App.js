@@ -4,6 +4,7 @@ import ShowNavbar from "./components/navbar";
 import ShowAuthorPage from "./components/author";
 import {ShowPost} from "./components/post";
 import {ShowPostDetail} from "./components/postDetail"
+import ShowAuthorArticle from "./components/authorArticle";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/Post" element={<ShowPost />} />
         <Route path="/Post/:id" element={<ShowPostDetail />} />
         <Route path="/Author" element={<ShowAuthorPage />} />
+        <Route path="/Author/:id" element={<ShowAuthorArticle />} />
       </Routes>
     </>
   );
