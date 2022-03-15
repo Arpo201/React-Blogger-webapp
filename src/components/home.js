@@ -11,7 +11,7 @@ const ShowHome = () =>{
                     width: "100vw",
                     height: "100vh",
                     }}>
-                        <h1 style={{color:"#FFF", fontSize:200}}>Welcome</h1>
+                        <h1 style={{color:"#FFF", fontSize:"12vw"}}>Welcome</h1>
                 </div>
             </Container>
         </>
