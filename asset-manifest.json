@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/React-WordpressAPI-Project/static/css/main.477ced45.css",
-    "main.js": "/React-WordpressAPI-Project/static/js/main.8b61e1ec.js",
-    "index.html": "/React-WordpressAPI-Project/index.html",
-    "main.477ced45.css.map": "/React-WordpressAPI-Project/static/css/main.477ced45.css.map",
-    "main.8b61e1ec.js.map": "/React-WordpressAPI-Project/static/js/main.8b61e1ec.js.map"
+    "main.css": "/React-Blogger-webapp/static/css/main.477ced45.css",
+    "main.js": "/React-Blogger-webapp/static/js/main.8b61e1ec.js",
+    "index.html": "/React-Blogger-webapp/index.html",
+    "main.477ced45.css.map": "/React-Blogger-webapp/static/css/main.477ced45.css.map",
+    "main.8b61e1ec.js.map": "/React-Blogger-webapp/static/js/main.8b61e1ec.js.map"
   },
   "entrypoints": [
     "static/css/main.477ced45.css",
